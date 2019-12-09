@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import SeasonLogger from "./SeasonLogger"
 
 const SeasonDisplay = () => {
   const [geoLocation, setGeoLocation] = useState({
@@ -25,7 +26,7 @@ const SeasonDisplay = () => {
     } else if(!geoLocation.errorMsg && geoLocation.latitude) {
       return (
         <div>
-          location: {geoLocation.latitude} {geoLocation.longitude}
+          <SeasonLogger location={geoLocation}/>
         </div>
       )
     } else {
