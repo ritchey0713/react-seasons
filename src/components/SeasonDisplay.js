@@ -9,7 +9,6 @@ const SeasonDisplay = () => {
 
   useEffect(() => {
     window.navigator.geolocation.getCurrentPosition((position) => {
-      console.log("sd")
       setGeoLocation({...geoLocation, latitude: position.coords.latitude, longitude: position.coords.longitude})
     }, 
     (error) => {
