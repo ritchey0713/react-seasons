@@ -12,7 +12,7 @@ const SeasonLogger = (props) => {
   const season = getSeason(props.location.latitude, new Date().getMonth())
   return (
     <div>
-      {season}
+      {season === "Winter" ? "Burr, it's cold out!": "Let's go outside!"}
     </div>
   )
 }
