@@ -5,7 +5,6 @@ const App = () => {
   
   return (
     <div className="App">
-      Fresh app
       <SeasonDisplay />
     </div>
   );
