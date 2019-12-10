@@ -18,6 +18,8 @@ const SeasonDisplay = () => {
     })
 
   }, [])
+
+  const renderContent = () => {
     if(geoLocation.errorMsg && !geoLocation.latitude) {
       return (
         <div>
@@ -33,9 +35,15 @@ const SeasonDisplay = () => {
     } else {
       return (
       <Loader />
-
       )
     }
+  }
+  
+  return (
+    renderContent()
+  )
+
 }
+
 
 export default SeasonDisplay
