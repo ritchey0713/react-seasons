@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import SeasonLogger from "./SeasonLogger"
+import Loader from "./Loader"
 
 const SeasonDisplay = () => {
   const [geoLocation, setGeoLocation] = useState({
@@ -31,7 +32,8 @@ const SeasonDisplay = () => {
       )
     } else {
       return (
-        <p>LOADING</p>
+      <Loader />
+
       )
     }
 }
